@@ -377,10 +377,24 @@
     const ph = $('[data-i18n-placeholder="chat.placeholder"]');
     if(ph) ph.placeholder = t(lang,'chat.placeholder') || ph.placeholder;
   }
+  
+async function loadPartial(selector, file){
+  const container = document.querySelector(selector);
+  if(!container) return;
+  try{
+    const html = await fetch(file).then(r => r.text());
+    container.innerHTML = html;
+  }catch(err){
+    console.error("Load error:", file, err);
+  }
+}
 
   /* ===== Init ===== */
-  document.addEventListener('DOMContentLoaded', ()=>{
+  document.addEventListener('DOMContentLoaded', async ()=>{
     try{
+      await loadPartial('#header', 'components/header.html');
+await loadPartial('#footer', 'components/footer.html');
+
       initTheme();
       initDrawer();
       initHeaderShrink();
@@ -464,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.title = title;
   }
 });
+
 /* ===== Contact Form (EmailJS) ===== */
 document.addEventListener("DOMContentLoaded", () => {
 
