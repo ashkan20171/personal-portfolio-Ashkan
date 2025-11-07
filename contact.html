@@ -3,72 +3,46 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>تماس | اشکان مطاعی</title>
+  <title data-i18n="contact.title">تماس | اشکان مطاعی</title>
   <meta name="description" content="Get in touch with Ashkan."/>
-  <meta name="robots" content="index,follow"/>
   <meta name="theme-color" content="#7c3aed"/>
+
   <link rel="preload" href="assets/css/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="assets/css/site.css"></noscript>
-
-  <link rel="canonical" href="https://example.com/contact.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="تماس | اشکان مطاعی"/>
-  <meta property="og:description" content="Get in touch with Ashkan."/>
-  <meta property="og:url" content="https://example.com/contact.html"/>
-  <meta property="og:image" content="favicon.svg"/>
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="تماس | اشکان مطاعی"/>
-  <meta name="twitter:description" content="Get in touch with Ashkan."/>
-
-
-  <!-- GA4: replace G-ASHKAN1234 with your real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ASHKAN1234"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ASHKAN1234');
-  </script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Ashkan",
-  "url": "https://example.com/contact.html"
-}
-  </script>
-
   <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 </head>
 <body>
 
-<header class="site-header glass neon" id="siteHeader" role="banner">
+<header class="site-header glass neon" id="siteHeader">
   <div class="container row">
-    <a class="brand" href="index.html" aria-label="Home">
-      <img src="favicon.svg" alt="A logo" width="28" height="28"/><span>Ashkan</span>
+    <a class="brand" href="index.html">
+      <img src="favicon.svg" width="28" height="28"/><span>Ashkan</span>
     </a>
-    <nav class="menu" id="mainMenu" aria-label="Primary">
+    <nav class="menu" id="mainMenu">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="about.html" data-i18n="nav.about">About</a>
       <a href="skills.html" data-i18n="nav.skills">Skills</a>
       <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="blog.html" data-i18n="blog.title">Blog</a>
       <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
+
     <div class="actions">
-      <button id="switchFa" class="btn ghost" aria-label="Switch to Persian">FA</button>
-      <button id="switchEn" class="btn ghost" aria-label="Switch to English">EN</button>
-      <button id="themeToggle" class="btn ghost" title="Theme" aria-pressed="false">☼/☾</button>
-      <button class="hamb" id="menuToggle" aria-label="Open menu">☰</button>
+      <button id="switchFa" class="btn ghost">FA</button>
+      <button id="switchEn" class="btn ghost">EN</button>
+      <button id="themeToggle" class="btn ghost">☼/☾</button>
+      <button class="hamb" id="menuToggle">☰</button>
     </div>
   </div>
-  <aside class="drawer" id="drawer" aria-label="Mobile menu">
-    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+
+  <aside class="drawer" id="drawer">
+    <button id="drawerClose" class="drawer-close">✕</button>
     <a href="index.html" data-i18n="nav.home">Home</a>
     <a href="about.html" data-i18n="nav.about">About</a>
     <a href="skills.html" data-i18n="nav.skills">Skills</a>
     <a href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a href="blog.html" data-i18n="blog.title">Blog</a>
     <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
     <div class="drawer-lang">
@@ -81,26 +55,27 @@
 
 <section class="section"><div class="container" data-anim>
   <h1 class="section-title" data-i18n="contact.title">Contact</h1>
+
   <div class="split">
-    <form id="contactForm" class="glass" aria-label="Contact form">
+    <form id="contactForm" class="glass">
       <div class="form-row">
         <div>
           <label for="name" data-i18n="contact.name">Name</label>
-          <input class="input" id="name" name="from_name" data-i18n-placeholder="contact.name" required/>
+          <input class="input" id="name" name="from_name" data-i18n-placeholder="contact.name" required>
         </div>
         <div>
           <label for="email" data-i18n="contact.email">Email</label>
-          <input class="input" id="email" type="email" name="reply_to" data-i18n-placeholder="contact.email" required/>
+          <input class="input" id="email" type="email" name="reply_to" data-i18n-placeholder="contact.email" required>
         </div>
       </div>
 
       <label for="message" data-i18n="contact.message">Message</label>
-      <textarea class="input" id="message" name="message" data-i18n-placeholder="contact.message" rows="6" required></textarea>
+      <textarea class="input" id="message" name="message" rows="6" data-i18n-placeholder="contact.message" required></textarea>
 
       <button type="submit" class="btn" data-i18n="contact.send">Send</button>
 
-      <div id="contactOk" class="alert ok" role="status" data-i18n="contact.success">✅ Sent</div>
-      <div id="contactErr" class="alert err" role="alert" data-i18n="contact.error">❌ Error</div>
+      <div id="contactOk" class="alert ok" data-i18n="contact.success">✅ Sent</div>
+      <div id="contactErr" class="alert err" data-i18n="contact.error">❌ Error</div>
     </form>
 
     <div>
@@ -120,16 +95,19 @@
         </ul>
       </div>
     </div>
+
   </div>
 </div></section>
 
 
-
-<footer class="footer" role="contentinfo"><div class="container">
-  <small class="muted">© 2025 Ashkan Mataee — Ultra WOW.</small>
+<footer class="footer"><div class="container">
+  <small class="muted" data-i18n="footer.copyright">
+    © 2025 Ashkan Mataee — Ultra WOW.
+  </small>
 </div></footer>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
-<script src="assets/js/site.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="assets/js/site.js"></script>
 
 </body>
 </html>
