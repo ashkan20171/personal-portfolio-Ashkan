@@ -1,0 +1,14 @@
+{
+  "nav.home": "خانه",
+  "nav.about": "درباره من",
+  "nav.skills": "مهارت‌ها",
+  "nav.projects": "پروژه‌ها",
+  "nav.certs": "گواهی‌نامه‌ها",
+  "nav.blog": "وبلاگ",
+  "nav.contact": "تماس",
+
+  "hero.title": "سلام، من اشکان هستم — طراح تجربه‌های لذت‌بخش کاربری.",
+  "hero.subtitle": "توسعه‌دهنده فرانت‌اند با تمرکز بر React/Angular، عملکرد و دسترس‌پذیری.",
+  "hero.ctaProjects": "مشاهده پروژه‌ها",
+  "hero.ctaContact": "ارتباط"
+}

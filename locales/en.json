@@ -1,0 +1,14 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.certs": "Certificates",
+  "nav.blog": "Blog",
+  "nav.contact": "Contact",
+
+  "hero.title": "Hi, I’m Ashkan — I craft delightful user experiences.",
+  "hero.subtitle": "Frontend developer focused on React/Angular, performance and accessibility.",
+  "hero.ctaProjects": "View Projects",
+  "hero.ctaContact": "Contact"
+}

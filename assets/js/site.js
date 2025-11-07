@@ -15,53 +15,85 @@
   const ENABLE_NEON    = true;   // پس‌زمینه نئونی قهرمان
 
   /* ===== i18n dictionary (keys used by your HTMLs with data-i18n) ===== */
-  const i18n = {
-    fa: {
-      nav:{home:"خانه",about:"درباره",skills:"مهارت‌ها",projects:"پروژه‌ها",certs:"مدارک",contact:"تماس",blog:"وبلاگ"},
-      hero:{
-        title:"سلام، من اشکان مطاعی هستم — تجربه‌های کاربریِ چشمگیر می‌سازم.",
-        subtitle:"توسعه‌دهندهٔ فرانت‌اند با تمرکز بر React/Angular، عملکرد و دسترس‌پذیری.",
-        ctaProjects:"مشاهده پروژه‌ها", ctaContact:"تماس"
-      },
-      home:{
-        pitchTitle:"چی کار می‌کنم",
-        pitchBody:"رابط‌های سریع، دسترس‌پذیر و سئوپسند می‌سازم و به تیم‌ها کمک می‌کنم مطمئن تحویل بدهند.",
-        point1:"دیزاین سیستم و UI پیکسل‌پرفکت",
-        point2:"Performance، Accessibility و i18n",
-        point3:"همکاری حرفه‌ای با تیم‌های جهانی",
-        cardTitle:"هایلایت‌ها"
-      },
-      certs:{title:"گواهی‌نامه‌ها",view:"مشاهده مدرک"},
-      blog:{title:"وبلاگ",empty:"هیچ پستی موجود نیست."},
-      contact:{send:"ارسال"},
-      footer:{copyright:"© 2025 اشکان مطاعی — Ultra WOW."},
-      chat:{title:"چت با AshkanBot",placeholder:"پیام خود را بنویس...",typing:"در حال تایپ..."}
+ const i18n = {
+  fa: {
+    nav:{home:"خانه",about:"درباره",skills:"مهارت‌ها",projects:"پروژه‌ها",certs:"مدارک",contact:"تماس",blog:"وبلاگ"},
+    hero:{
+      title:"سلام، من اشکان مطاعی هستم — تجربه‌های کاربریِ چشمگیر می‌سازم.",
+      subtitle:"توسعه‌دهنده فرانت‌اند با تمرکز بر React/Angular، عملکرد و دسترس‌پذیری.",
+      ctaProjects:"مشاهده پروژه‌ها", ctaContact:"تماس"
     },
-    en: {
-      nav:{home:"Home",about:"About",skills:"Skills",projects:"Projects",certs:"Certificates",contact:"Contact",blog:"Blog"},
-      hero:{
-        title:"Hi, I’m Ashkan — I craft delightful user experiences.",
-        subtitle:"Frontend developer focused on React/Angular, performance and accessibility.",
-        ctaProjects:"View Projects", ctaContact:"Contact"
-      },
-      home:{
-        pitchTitle:"What I do",
-        pitchBody:"I build fast, accessible, SEO-friendly interfaces and help teams ship confidently.",
-        point1:"Design systems & pixel-perfect UI",
-        point2:"Performance, accessibility, i18n",
-        point3:"Great communication with global teams",
-        cardTitle:"Recent highlights"
-      },
-      certs:{title:"Certificates",view:"View Certificate"},
-      blog:{title:"Blog",empty:"No posts found."},
-      contact:{send:"Send"},
-      footer:{copyright:"© 2025 Ashkan Mataee — Ultra WOW."},
-      chat:{title:"Chat with AshkanBot",placeholder:"Type a message...",typing:"typing..."}
-    }
-  };
+    home:{
+      pitchTitle:"چی کار می‌کنم",
+      pitchBody:"رابط‌های سریع، دسترس‌پذیر و سئوپسند می‌سازم و به تیم‌ها کمک می‌کنم مطمئن تحویل بدهند.",
+      point1:"دیزاین سیستم و UI پیکسل‌پرفکت",
+      point2:"Performance، Accessibility و i18n",
+      point3:"همکاری حرفه‌ای با تیم‌های جهانی",
+      cardTitle:"هایلایت‌ها",
+      hl1:"پرتال منابع انسانی (Angular + ASP.NET)",
+      hl2:"سایت گردشگری دوزبانه (React)",
+      hl3:"فروشگاه اینترنتی (Vue)"
+    },
+    projects:{
+      title:"پروژه‌ها",
+      filterAll:"همه",
+      filterWeb:"وب",
+      filterDashboard:"داشبورد",
+      filterEcom:"فروشگاهی",
+      hr:"پیگیری حضور، مرخصی، حقوق، تقویم جلالی",
+      tourism:"رزرو، چندزبانه و سئو",
+      shop:"فروشگاه سریع با فیلتر و سبد خرید",
+      landing:"سیستم طراحی و لندینگ"
+    },
+    skills:{title:"مهارت‌ها"},
+    blog:{title:"وبلاگ",read:"ادامه مطلب",back:"بازگشت",empty:"هیچ پستی موجود نیست."},
+    certs:{title:"گواهی‌نامه‌ها",view:"مشاهده مدرک"},
+    contact:{send:"ارسال"},
+    footer:{copyright:"© 2025 اشکان مطاعی"},
+    chat:{title:"چت با AshkanBot",placeholder:"پیام خود را بنویس...",typing:"در حال تایپ..."}
+  },
+
+  en: {
+    nav:{home:"Home",about:"About",skills:"Skills",projects:"Projects",certs:"Certificates",contact:"Contact",blog:"Blog"},
+    hero:{
+      title:"Hi, I’m Ashkan — I craft delightful user experiences.",
+      subtitle:"Frontend developer focused on React/Angular, performance and accessibility.",
+      ctaProjects:"View Projects", ctaContact:"Contact"
+    },
+    home:{
+      pitchTitle:"What I do",
+      pitchBody:"I build fast, accessible, SEO-friendly interfaces and help teams ship confidently.",
+      point1:"Design systems & pixel-perfect UI",
+      point2:"Performance, accessibility, i18n",
+      point3:"Great communication with global teams",
+      cardTitle:"Recent highlights",
+      hl1:"HR Portal (Angular + ASP.NET)",
+      hl2:"Bilingual Tourism Site (React)",
+      hl3:"E-commerce Storefront (Vue)"
+    },
+    projects:{
+      title:"Projects",
+      filterAll:"All",
+      filterWeb:"Web",
+      filterDashboard:"Dashboard",
+      filterEcom:"E-commerce",
+      hr:"Time tracking, leave, payroll, Jalali calendar.",
+      tourism:"Bilingual & SEO-optimized booking.",
+      shop:"Fast storefront with filters & cart.",
+      landing:"Design system & landing pages."
+    },
+    skills:{title:"Skills"},
+    blog:{title:"Blog",read:"Read More",back:"Back",empty:"No posts found."},
+    certs:{title:"Certificates",view:"View Certificate"},
+    contact:{send:"Send"},
+    footer:{copyright:"© 2025 Ashkan Mataee"},
+    chat:{title:"Chat with AshkanBot",placeholder:"Type a message...",typing:"typing..."}
+  }
+};
+
 
   /* ===== Safe helpers ===== */
-  const getLang = () => localStorage.getItem('lang') || 'fa';
+  const getLang = () => localStorage.getItem('lang') || 'en';
   const setLang = (l) => localStorage.setItem('lang', l);
   const t = (lang, path) => {
     try{
