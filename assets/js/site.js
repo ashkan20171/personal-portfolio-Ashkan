@@ -74,7 +74,7 @@
     skills:{title:"مهارت‌ها"},
     blog:{title:"وبلاگ",read:"ادامه مطلب",back:"بازگشت",empty:"هیچ پستی موجود نیست."},
     certs:{title:"گواهی‌نامه‌ها",view:"مشاهده مدرک"},
-    contact:{send:"ارسال"},
+    contact:{name:"نام", email:"ایمیل", message:"پیام", send:"ارسال"},
     footer:{copyright:"© 2025 اشکان مطاعی"},
     chat:{title:"چت با AshkanBot",placeholder:"پیام خود را بنویس...",typing:"در حال تایپ..."}
   },
@@ -137,7 +137,8 @@
     skills:{title:"Skills"},
     blog:{title:"Blog",read:"Read More",back:"Back",empty:"No posts found."},
     certs:{title:"Certificates",view:"View Certificate"},
-    contact:{send:"Send"},
+    contact:{name:"Name", email:"Email", message:"Message", send:"Send"
+},
     footer:{copyright:"© 2025 Ashkan Mataee"},
     chat:{title:"Chat with AshkanBot",placeholder:"Type a message...",typing:"typing..."}
   }
@@ -463,6 +464,35 @@ document.addEventListener('DOMContentLoaded', () => {
     document.title = title;
   }
 });
+/* ===== Contact Form (EmailJS) ===== */
+document.addEventListener("DOMContentLoaded", () => {
+
+  emailjs.init("eIFLMnft4drU-dBDv"); // PUBLIC KEY شما
+
+  const form = document.getElementById("contactForm");
+  const ok = document.getElementById("contactOk");
+  const err = document.getElementById("contactErr");
+
+  if(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      ok.style.display = "none";
+      err.style.display = "none";
+
+      emailjs.sendForm(
+        "service_2ve5x3n",      // SERVICE ID
+        "template_ln3pd5s",    // TEMPLATE ID
+        this
+      ).then(() => {
+        ok.style.display = "block";
+        form.reset();
+      }).catch(() => {
+        err.style.display = "block";
+      });
+    });
+  }
+});
+
 // === Neon Background Parallax ===
 const certsBg = document.getElementById("certsBg");
 if (certsBg) {
@@ -471,4 +501,5 @@ if (certsBg) {
     // حرکت نرم و ظریف با نسبت پایین برای عمق سه‌بعدی
     certsBg.style.transform = `translateY(${scrollY * 0.1}px) scale(1.05)`;
   });
+  
 }

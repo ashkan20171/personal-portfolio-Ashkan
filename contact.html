@@ -36,26 +36,30 @@
 <div class="container" data-anim>
   <h1 class="section-title" data-i18n="contact.title"></h1>
   <div class="split">
-    <form id="contactForm" class="glass">
-      <div class="form-row">
-        <div>
-          <label for="name" data-i18n="contact.name"></label>
-          <input class="input" id="name" name="from_name" required/>
-        </div>
-        <div>
-          <label for="email" data-i18n="contact.email"></label>
-          <input class="input" id="email" type="email" name="reply_to" required/>
-        </div>
-      </div>
+    <form id="contactForm" class="form">
+  <div class="grid two">
+    <input type="text" name="from_name" class="input"
+           data-i18n-placeholder="contact.name"
+           placeholder="نام شما">
+    <input type="email" name="reply_to" class="input"
+           data-i18n-placeholder="contact.email"
+           placeholder="ایمیل شما">
+  </div>
 
-      <label for="message" data-i18n="contact.message"></label>
-      <textarea class="input" id="message" name="message" rows="6" required></textarea>
+  <textarea name="message" rows="6" class="input"
+            data-i18n-placeholder="contact.message"
+            placeholder="پیام شما"></textarea>
 
-      <button type="submit" class="btn" data-i18n="contact.send"></button>
+  <button class="btn" style="margin-top: 12px;" data-i18n="contact.send">ارسال</button>
 
-      <div id="contactOk" class="alert ok" style="display:none;">✅ پیام ارسال شد!</div>
-      <div id="contactErr" class="alert err" style="display:none;">❌ ارسال با خطا مواجه شد.</div>
-    </form>
+  <p id="contactOk" class="success" style="display:none; margin-top:10px;">
+    ✅ پیام شما ارسال شد!
+  </p>
+  <p id="contactErr" class="error" style="display:none; margin-top:10px;">
+    ❌ مشکلی در ارسال رخ داد. لطفا دوباره تلاش کنید.
+  </p>
+</form>
+
 
     <div>
       <div class="card glass">

@@ -358,3 +358,32 @@ body.light .btn.ghost {
   from { transform: translateY(0); }
   to { transform: translateY(-30px); }
 }
+/* Contact section layout fix */
+.contact-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* حالت پیش‌فرض (انگلیسی / LTR) */
+html[lang="en"] .contact-row {
+  flex-direction: row;
+  text-align: left;
+}
+
+/* حالت فارسی / RTL */
+html[lang="fa"] .contact-row {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* اطمینان از راست‌چین شدن placeholder */
+html[lang="fa"] input,
+html[lang="fa"] textarea {
+  direction: rtl;
+}
+
+html[lang="en"] input,
+html[lang="en"] textarea {
+  direction: ltr;
+}
