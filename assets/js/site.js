@@ -45,6 +45,32 @@
       shop:"فروشگاه سریع با فیلتر و سبد خرید",
       landing:"سیستم طراحی و لندینگ"
     },
+    about: {
+  title: "درباره من",
+  body: "من توسعه‌دهنده فرانت‌اند و متخصص پیاده‌سازی و پشتیبانی نرم‌افزار هستم. با React و Angular کار می‌کنم و روی UX، عملکرد و دسترس‌پذیری تمرکز دارم.",
+  expTitle: "تجربه",
+  eduTitle: "تحصیلات",
+
+  exp1Role: "مهندس پشتیبانی",
+  exp1Company: "ارقام نگار",
+  exp1Date: "1404/06 – اکنون",
+
+  exp2Role: "نصب و پشتیبانی",
+  exp2Company: "رایانه افزار افلاک",
+  exp2Date: "1401/12 – 1404/06",
+
+  exp3Role: "کارآموز (نرم‌افزار حسابداری)",
+  exp3Company: "نوسا",
+  exp3Date: "1401/06 – 1401/07",
+
+  exp4Role: "پشتیبان نرم‌افزار",
+  exp4Company: "گروه GISP",
+  exp4Date: "1400/11 – 1401/03",
+
+  edu1: "کارشناسی فناوری نرم‌افزار — موسسه الوند (1395–1397)",
+  edu2: "کاردانی نرم‌افزار — دانشگاه آزاد همدان (1393–1395)"
+},
+
     skills:{title:"مهارت‌ها"},
     blog:{title:"وبلاگ",read:"ادامه مطلب",back:"بازگشت",empty:"هیچ پستی موجود نیست."},
     certs:{title:"گواهی‌نامه‌ها",view:"مشاهده مدرک"},
@@ -82,6 +108,32 @@
       shop:"Fast storefront with filters & cart.",
       landing:"Design system & landing pages."
     },
+    about: {
+  title: "About Me",
+  body: "I am a frontend developer and software deployment/support specialist. I work with React and Angular, focusing on user experience, performance, and accessibility.",
+  expTitle: "Experience",
+  eduTitle: "Education",
+
+  exp1Role: "Support Engineer",
+  exp1Company: "Arqam Negar",
+  exp1Date: "2025 – Present",
+
+  exp2Role: "Support & Deployment",
+  exp2Company: "SDS R.Aflak",
+  exp2Date: "2023 – 2025",
+
+  exp3Role: "Intern (Accounting Software)",
+  exp3Company: "Nosa",
+  exp3Date: "2022",
+
+  exp4Role: "Support Technician",
+  exp4Company: "GISP Group",
+  exp4Date: "2021",
+
+  edu1: "BSc in Software Technology — Alvand Institute (2016–2018)",
+  edu2: "Associate in Software — IAU Hamedan (2014–2016)"
+},
+
     skills:{title:"Skills"},
     blog:{title:"Blog",read:"Read More",back:"Back",empty:"No posts found."},
     certs:{title:"Certificates",view:"View Certificate"},

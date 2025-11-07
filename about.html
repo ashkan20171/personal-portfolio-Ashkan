@@ -3,47 +3,22 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>درباره من | اشکان مطاعی</title>
+  <title data-i18n="about.title">درباره من</title>
+
   <meta name="description" content="About Ashkan Mataee — experience & education."/>
   <meta name="robots" content="index,follow"/>
   <meta name="theme-color" content="#7c3aed"/>
+
   <link rel="preload" href="assets/css/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="assets/css/site.css"></noscript>
 
   <link rel="canonical" href="https://example.com/about.html"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="درباره من | اشکان مطاعی"/>
+  <meta property="og:title" content="About"/>
   <meta property="og:description" content="About Ashkan Mataee — experience & education."/>
   <meta property="og:url" content="https://example.com/about.html"/>
   <meta property="og:image" content="favicon.svg"/>
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="درباره من | اشکان مطاعی"/>
-  <meta name="twitter:description" content="About Ashkan Mataee — experience & education."/>
-
-
-  <!-- GA4: replace G-ASHKAN1234 with your real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ASHKAN1234"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ASHKAN1234');
-  </script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Ashkan Ultra WOW",
-  "url": "https://example.com/",
-  "inLanguage": "fa-IR",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://example.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-  </script>
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 </head>
@@ -55,30 +30,31 @@
       <img src="favicon.svg" alt="A logo" width="28" height="28"/><span>Ashkan</span>
     </a>
     <nav class="menu" id="mainMenu" aria-label="Primary">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="about.html" data-i18n="nav.about">About</a>
-      <a href="skills.html" data-i18n="nav.skills">Skills</a>
-      <a href="projects.html" data-i18n="nav.projects">Projects</a>
-      <a href="blog.html" data-i18n="blog.title">Blog</a>
-      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
-      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="index.html" data-i18n="nav.home"></a>
+      <a href="about.html" data-i18n="nav.about"></a>
+      <a href="skills.html" data-i18n="nav.skills"></a>
+      <a href="projects.html" data-i18n="nav.projects"></a>
+      <a href="blog.html" data-i18n="nav.blog"></a>
+      <a href="certificates.html" data-i18n="nav.certs"></a>
+      <a href="contact.html" data-i18n="nav.contact"></a>
     </nav>
     <div class="actions">
-      <button id="switchFa" class="btn ghost" aria-label="Switch to Persian">FA</button>
-      <button id="switchEn" class="btn ghost" aria-label="Switch to English">EN</button>
-      <button id="themeToggle" class="btn ghost" title="Theme" aria-pressed="false">☼/☾</button>
-      <button class="hamb" id="menuToggle" aria-label="Open menu">☰</button>
+      <button id="switchFa" class="btn ghost">FA</button>
+      <button id="switchEn" class="btn ghost">EN</button>
+      <button id="themeToggle" class="btn ghost">☼/☾</button>
+      <button class="hamb" id="menuToggle">☰</button>
     </div>
   </div>
-  <aside class="drawer" id="drawer" aria-label="Mobile menu">
-    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="about.html" data-i18n="nav.about">About</a>
-    <a href="skills.html" data-i18n="nav.skills">Skills</a>
-    <a href="projects.html" data-i18n="nav.projects">Projects</a>
-    <a href="blog.html" data-i18n="blog.title">Blog</a>
-    <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
-    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+
+  <aside class="drawer" id="drawer">
+    <button class="drawer-close" id="drawerClose">✕</button>
+    <a href="index.html" data-i18n="nav.home"></a>
+    <a href="about.html" data-i18n="nav.about"></a>
+    <a href="skills.html" data-i18n="nav.skills"></a>
+    <a href="projects.html" data-i18n="nav.projects"></a>
+    <a href="blog.html" data-i18n="nav.blog"></a>
+    <a href="certificates.html" data-i18n="nav.certs"></a>
+    <a href="contact.html" data-i18n="nav.contact"></a>
     <div class="drawer-lang">
       <button id="drawerFa" class="btn ghost">FA</button>
       <button id="drawerEn" class="btn ghost">EN</button>
@@ -87,9 +63,12 @@
 </header>
 
 
-<section class="section"><div class="container" data-anim>
-  <h1 class="section-title" data-i18n="about.title">About Me</h1>
-  <p data-i18n="about.body">I’m a frontend developer and software support/deployment specialist. I ship products with React/Angular and care about UX, accessibility and clean code.</p>
+<section class="section">
+<div class="container" data-anim>
+
+  <h1 class="section-title" data-i18n="about.title"></h1>
+  <p data-i18n="about.body"></p>
+
   <div class="grid two">
     <div class="card glass">
       <h3 data-i18n="about.expTitle">Experience</h3>
@@ -101,21 +80,24 @@
       </ul>
     </div>
     <div class="card glass">
-      <h3 data-i18n="about.eduTitle">Education</h3>
+      <h3 data-i18n="about.eduTitle"></h3>
       <ul>
-        <li>BSc Software Technology — Alvand Institute (1395–1397)</li>
-        <li>Associate Software — IAU Hamedan (1393–1395)</li>
+        <li data-i18n="about.edu1"></li>
+        <li data-i18n="about.edu2"></li>
       </ul>
     </div>
+
   </div>
-</div></section>
+</div>
+</section>
 
 
-<footer class="footer" role="contentinfo"><div class="container">
-  <small class="muted">© 2025 Ashkan Mataee — Ultra WOW.</small>
-</div></footer>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+<footer class="footer">
+  <div class="container">
+    <small class="muted" data-i18n="footer.copyright"></small>
+  </div>
+</footer>
+
 <script src="assets/js/site.js" defer></script>
-
 </body>
 </html>

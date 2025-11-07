@@ -84,26 +84,37 @@
   <div class="split">
     <form id="contactForm" class="glass" aria-label="Contact form">
       <div class="form-row">
-        <div><label for="name" data-i18n="contact.name">Name / نام</label><input class="input" id="name" name="from_name" required/></div>
-        <div><label for="email" data-i18n="contact.email">Email / ایمیل</label><input class="input" id="email" type="email" name="reply_to" required/></div>
+        <div>
+          <label for="name" data-i18n="contact.name">Name</label>
+          <input class="input" id="name" name="from_name" data-i18n-placeholder="contact.name" required/>
+        </div>
+        <div>
+          <label for="email" data-i18n="contact.email">Email</label>
+          <input class="input" id="email" type="email" name="reply_to" data-i18n-placeholder="contact.email" required/>
+        </div>
       </div>
-      <label for="message" data-i18n="contact.message">Message / پیام</label>
-      <textarea class="input" id="message" name="message" rows="6" required></textarea>
+
+      <label for="message" data-i18n="contact.message">Message</label>
+      <textarea class="input" id="message" name="message" data-i18n-placeholder="contact.message" rows="6" required></textarea>
+
       <button type="submit" class="btn" data-i18n="contact.send">Send</button>
-      <div id="contactOk" class="alert ok" role="status">✅ Sent</div>
-      <div id="contactErr" class="alert err" role="alert">❌ Error</div>
+
+      <div id="contactOk" class="alert ok" role="status" data-i18n="contact.success">✅ Sent</div>
+      <div id="contactErr" class="alert err" role="alert" data-i18n="contact.error">❌ Error</div>
     </form>
+
     <div>
       <div class="card glass">
-        <h3>Links</h3>
+        <h3 data-i18n="contact.linksTitle">Links</h3>
         <p><a href="mailto:ashkan.motaee@yahoo.com">ashkan.motaee@yahoo.com</a></p>
-        <p><a target="_blank" href="https://github.com/ashkan20171" rel="noopener">GitHub</a></p>
-        <p><a target="_blank" href="#" rel="noopener">LinkedIn</a></p>
+        <p><a target="_blank" href="https://github.com/ashkan20171">GitHub</a></p>
+        <p><a target="_blank" href="#">LinkedIn</a></p>
       </div>
+
       <div class="card glass">
         <h3 data-i18n="contact.whyTitle">Why me?</h3>
         <ul>
-          <li data-i18n="contact.why1">Pixel‑perfect UI</li>
+          <li data-i18n="contact.why1">Pixel-perfect UI</li>
           <li data-i18n="contact.why2">Performance & SEO focused</li>
           <li data-i18n="contact.why3">Global collaboration</li>
         </ul>
@@ -111,6 +122,7 @@
     </div>
   </div>
 </div></section>
+
 
 
 <footer class="footer" role="contentinfo"><div class="container">
