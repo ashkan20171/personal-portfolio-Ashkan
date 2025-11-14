@@ -1,48 +1,43 @@
-<header id="siteHeader" class="header glass">
-  <div class="container header-inner">
+<header class="site-header glass" id="siteHeader">
+  <div class="container row">
+    
+    <a class="brand" href="index.html" aria-label="Home">
+      <img src="favicon.svg" alt="Logo" width="28" height="28">
+      <span>Ashkan</span>
+    </a>
 
-    <!-- Logo -->
-    <a href="index.html" class="logo">Ashkan</a>
-
-    <!-- Desktop Nav -->
-    <nav class="nav">
+    <nav class="menu" aria-label="Main Navigation">
       <a href="index.html" data-i18n="nav.home"></a>
       <a href="about.html" data-i18n="nav.about"></a>
       <a href="skills.html" data-i18n="nav.skills"></a>
       <a href="projects.html" data-i18n="nav.projects"></a>
-      <a href="certificates.html" data-i18n="nav.certs"></a>
       <a href="blog.html" data-i18n="nav.blog"></a>
+      <a href="certificates.html" data-i18n="nav.certs"></a>
       <a href="contact.html" data-i18n="nav.contact"></a>
     </nav>
 
-    <!-- Controls (theme + lang) -->
-    <div class="controls">
-      <button id="themeToggle" class="btn ghost" aria-pressed="false">🌓</button>
+    <div class="actions">
       <button id="switchFa" class="btn ghost">FA</button>
       <button id="switchEn" class="btn ghost">EN</button>
+      <button id="themeToggle" class="btn ghost">☼/☾</button>
+      <button class="hamb" id="menuToggle">☰</button>
     </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="menuToggle" class="menu-btn">☰</button>
-
   </div>
 
-  <!-- Drawer (Mobile Side Menu) -->
-  <div id="drawer" class="drawer">
-    <button id="drawerClose" class="drawer-close">✕</button>
+  <aside class="drawer" id="drawer">
+    <button class="drawer-close" id="drawerClose">✕</button>
 
     <a href="index.html" data-i18n="nav.home"></a>
     <a href="about.html" data-i18n="nav.about"></a>
     <a href="skills.html" data-i18n="nav.skills"></a>
     <a href="projects.html" data-i18n="nav.projects"></a>
-    <a href="certificates.html" data-i18n="nav.certs"></a>
     <a href="blog.html" data-i18n="nav.blog"></a>
+    <a href="certificates.html" data-i18n="nav.certs"></a>
     <a href="contact.html" data-i18n="nav.contact"></a>
 
-    <div style="margin-top:20px; display:flex; gap:10px;">
+    <div class="drawer-lang">
       <button id="drawerFa" class="btn ghost">FA</button>
       <button id="drawerEn" class="btn ghost">EN</button>
     </div>
-
-  </div>
+  </aside>
 </header>
