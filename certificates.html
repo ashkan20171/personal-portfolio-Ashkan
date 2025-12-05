@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title data-fa="مدارک | اشکان مطاعی" data-en="Certificates | Ashkan Mataee">مدارک | اشکان مطاعی</title>
+  <title data-fa="مدارک | اشکان مطاعی" data-en="Certificates | Ashkan Mataee">
+    مدارک | اشکان مطاعی
+  </title>
 
   <meta name="description" content="Certificates & courses — bilingual list."/>
   <meta name="robots" content="index,follow"/>
@@ -18,7 +20,7 @@
 
 <body>
 
-<!-- هدر از فایل header.html لود می‌شود -->
+<!-- هدر لود می‌شود -->
 <div id="header"></div>
 
 <section class="section">
@@ -26,9 +28,52 @@
 
     <h1 class="section-title" data-i18n="certs.title">Certificates</h1>
 
-    <div id="certList" class="cert-grid">
-      <!-- این بخش را مرحله بعد بدون JSON بازنویسی می‌کنیم -->
-      <div class="card"><p class="muted">Loading…</p></div>
+    <!-- مدارک اینجا ساخته می‌شوند -->
+    <div id="certList" class="cert-grid"></div>
+
+    <!-- داده های HTML خام -->
+    <div id="certData" style="display:none;">
+
+      <!-- فارسی -->
+      <div data-lang="fa">
+
+        <div class="cert" data-url="https://google.com">
+          <h3>گواهی TypeScript — دوره پیشرفته</h3>
+          <small>۱۴۰۳</small>
+        </div>
+
+        <div class="cert" data-url="https://google.com">
+          <h3>React Professional — دوره جامع</h3>
+          <small>۱۴۰۲</small>
+        </div>
+
+        <div class="cert" data-url="https://google.com">
+          <h3>UI/UX — طراحی محصول</h3>
+          <small>۱۴۰۱</small>
+        </div>
+
+      </div>
+
+      <!-- انگلیسی -->
+      <div data-lang="en">
+
+        <div class="cert" data-url="https://google.com">
+          <h3>Advanced TypeScript Certificate</h3>
+          <small>2024</small>
+        </div>
+
+        <div class="cert" data-url="https://google.com">
+          <h3>React Professional — Full Course</h3>
+          <small>2023</small>
+        </div>
+
+        <div class="cert" data-url="https://google.com">
+          <h3>UI/UX Product Design</h3>
+          <small>2022</small>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -37,9 +82,9 @@
 <!-- فوتر -->
 <div id="footer"></div>
 
-<!-- ترتیب صحیح اسکریپت‌ها -->
 <script src="assets/js/load-header.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/certs.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 
 </body>

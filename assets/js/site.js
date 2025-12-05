@@ -108,38 +108,3 @@ function tilt(el) {
   });
   el.addEventListener('mouseleave', () => el.style.transform = 'rotateX(0) rotateY(0)');
 }
-
-
-/* ============================
-    7) Certificates Loader (remove JSON later)
-============================ */
-(function() {
-  const container = document.getElementById("certList");
-  if (!container) return;
-
-  container.innerHTML = `
-    <div class="card"><p class="muted">Loading…</p></div>
-  `;
-
-  fetch("assets/data/certificates.json")
-    .then(r => r.json())
-    .then(data => {
-      const lang = localStorage.getItem("lang") || "fa";
-      const list = data[lang] || [];
-
-      container.innerHTML = "";
-      list.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card tilt";
-        card.innerHTML = `
-          <h3>${item.title}</h3>
-          <a href="${item.url}" target="_blank" class="btn">مشاهده مدرک</a>
-        `;
-        container.appendChild(card);
-        tilt(card);
-      });
-    })
-    .catch(() => {
-      container.innerHTML = `<div class="card"><p class="muted">خطا در بارگذاری مدارک</p></div>`;
-    });
-})();

@@ -3,83 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title data-fa="وبلاگ | اشکان مطاعی" data-en="Blog | Ashkan Mataee">وبلاگ | اشکان مطاعی</title>
 
-  <meta name="description" content="Personal blog — bilingual posts." />
-  <meta name="robots" content="index,follow"/>
-  <meta name="theme-color" content="#7c3aed"/>
+  <meta name="description" content="مقالات تخصصی و تجربیات اشکان مطاعی در توسعه فرانت‌اند، طراحی UI/UX و مسیر شغلی." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#7c3aed" />
 
-  <link rel="preload" href="assets/css/site.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="assets/css/site.css"></noscript>
-
-  <link rel="icon" href="favicon.svg" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 
 <body>
 
-<!-- هدر جدید -->
 <div id="header"></div>
 
-<div class="blog-bg"></div>
-
 <section class="section container">
-  <h2 class="section-title" data-i18n="blog.title">وبلاگ</h2>
 
-  <div class="grid two" id="blogPosts"></div>
+  <h1 class="section-title" data-i18n="blog.title">وبلاگ</h1>
 
+  <!-- خروجی پست‌ها اینجا -->
+  <div id="blogPosts" class="grid two"></div>
+
+  <!-- دیتای خام HTML (FA + EN) -->
   <div id="blogData" style="display:none;">
 
-    <!-- داده‌ها همانند قبل -->
     <!-- فارسی -->
     <div data-lang="fa">
-      <article data-id="1" data-img="assets/img/blog-hr.jpg">
-        <h3>پرتال منابع انسانی من با Angular و ASP.NET Core</h3>
+
+      <article class="blog-item"
+        data-id="1"
+        data-img="assets/img/blog-hr.jpg"
+        data-url="blog-post.html?id=1">
+
+        <h3>پرتال منابع انسانی — تجربه ساخت با Angular و ASP.NET</h3>
         <small>۱۴۰۴/۰۷/۲۰</small>
-        <p>چطور سامانه HR واقعی ...</p>
+        <p>چطور یک سامانه HR واقعی با امکانات ثبت ساعت، حقوق، مرخصی و تقویم جلالی طراحی کردم.</p>
       </article>
 
-      <article data-id="2" data-img="assets/img/blog-wow.jpg">
-        <h3>طراحی سایت Ultra WOW</h3>
+      <article class="blog-item"
+        data-id="2"
+        data-img="assets/img/blog-wow.jpg"
+        data-url="blog-post.html?id=2">
+
+        <h3>طراحی سایت Ultra WOW — سئوی قوی و انیمیشن‌های حرفه‌ای</h3>
         <small>۱۴۰۴/۰۷/۱۰</small>
-        <p>تجربه طراحی سایت...</p>
+        <p>داستان ساخت سایتی که برای معرفی خودم به کارفرمایان بین‌المللی طراحی کردم.</p>
       </article>
 
-      <article data-id="3" data-img="assets/img/blog-journey.jpg">
-        <h3>سفر من برای مهاجرت</h3>
+      <article class="blog-item"
+        data-id="3"
+        data-img="assets/img/blog-journey.jpg"
+        data-url="blog-post.html?id=3">
+
+        <h3>سفر من به‌عنوان توسعه‌دهنده فرانت‌اند ایرانی</h3>
         <small>۱۴۰۴/۰۶/۲۵</small>
-        <p>داستان واقعی ...</p>
+        <p>چطور از پرند شروع کردم و به رزومه‌ای بین‌المللی رسیدم.</p>
       </article>
+
     </div>
 
     <!-- انگلیسی -->
     <div data-lang="en">
-      <article data-id="1" data-img="assets/img/blog-hr.jpg">
-        <h3>Building My HR Portal</h3>
+
+      <article class="blog-item"
+        data-id="1"
+        data-img="assets/img/blog-hr.jpg"
+        data-url="blog-post.html?id=1">
+
+        <h3>Building an HR Portal with Angular & ASP.NET Core</h3>
         <small>2025-10-11</small>
-        <p>How I built...</p>
+        <p>How I built a real HR system including payroll, scheduling, and employee management.</p>
       </article>
 
-      <article data-id="2" data-img="assets/img/blog-wow.jpg">
-        <h3>Designing Ultra WOW</h3>
+      <article class="blog-item"
+        data-id="2"
+        data-img="assets/img/blog-wow.jpg"
+        data-url="blog-post.html?id=2">
+
+        <h3>Ultra WOW Portfolio — Design, SEO & Animation</h3>
         <small>2025-10-02</small>
-        <p>How I designed...</p>
+        <p>How I designed and optimized my bilingual portfolio with excellent UX.</p>
       </article>
 
-      <article data-id="3" data-img="assets/img/blog-journey.jpg">
-        <h3>My Developer Journey</h3>
+      <article class="blog-item"
+        data-id="3"
+        data-img="assets/img/blog-journey.jpg"
+        data-url="blog-post.html?id=3">
+
+        <h3>My Journey as an Iranian Front-End Developer</h3>
         <small>2025-09-15</small>
-        <p>My story...</p>
+        <p>The real story behind building a global-ready portfolio.</p>
       </article>
+
     </div>
 
   </div>
 </section>
 
-<!-- فوتر -->
 <div id="footer"></div>
 
-<!-- اسکریپت‌های بیرونی -->
 <script src="assets/js/load-header.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/blog.js" defer></script>
