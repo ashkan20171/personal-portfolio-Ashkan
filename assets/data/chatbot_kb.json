@@ -1,0 +1,44 @@
+{
+  "pairs": [
+    {
+      "q": {
+        "en": "resume",
+        "fa": "رزومه"
+      },
+      "a": {
+        "en": "You can download my resume here: <a href='resume.pdf'>Resume</a>",
+        "fa": "می‌تونی رزومه من رو از این لینک ببینی: <a href='resume.pdf'>دانلود رزومه</a>"
+      }
+    },
+    {
+      "q": {
+        "en": "projects",
+        "fa": "پروژه ها"
+      },
+      "a": {
+        "en": "See my work on <a href='projects.html'>Projects</a>.",
+        "fa": "برای دیدن پروژه‌ها به صفحه <a href='projects.html'>پروژه‌ها</a> برو."
+      }
+    },
+    {
+      "q": {
+        "en": "contact",
+        "fa": "تماس"
+      },
+      "a": {
+        "en": "Reach me via <a href='contact.html'>Contact</a>.",
+        "fa": "برای ارتباط، صفحه <a href='contact.html'>تماس</a> رو ببین."
+      }
+    },
+    {
+      "q": {
+        "en": "blog",
+        "fa": "وبلاگ"
+      },
+      "a": {
+        "en": "My blog is here: <a href='blog.html'>Blog</a>.",
+        "fa": "وبلاگ من اینجاست: <a href='blog.html'>وبلاگ</a>."
+      }
+    }
+  ]
+}

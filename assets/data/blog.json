@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "slug": "welcome",
+      "date": "2026-02-04",
+      "title": {
+        "fa": "شروع وبلاگ اشکان",
+        "en": "Welcome to Ashkan’s Blog"
+      },
+      "excerpt": {
+        "fa": "اینجا درباره پروژه‌ها، تکنولوژی و تجربه‌های کاری می‌نویسم.",
+        "en": "Here I write about projects, tech and engineering experience."
+      },
+      "content": {
+        "fa": "<p>سلام! این اولین پست وبلاگ من است. به‌زودی درباره پروژه‌ها، نکات فنی و تجربه‌های کاری می‌نویسم.</p>",
+        "en": "<p>Hi! This is my first blog post. Soon I’ll share projects, technical notes, and engineering experience.</p>"
+      }
+    }
+  ]
+}

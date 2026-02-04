@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800https://fonts.googleapis.com/css2?family=Inter:wght;600;800&family=Vazirmatn:wght;600;800&display=swapfamily=Vazirmatn:wght@400;600;800https://fonts.googleapis.com/css2?family=Inter:wght;600;800&family=Vazirmatn:wght;600;800&display=swapdisplay=swap" rel="stylesheet">
+  <title data-i18n="blog.title">وبلاگ | اشکان مطاعی</title>
+  <meta name="description" content="Ashkan Mataee blog — notes, projects and engineering write-ups."/>
+  <meta name="robots" content="index,follow"/>
+  <meta name="theme-color" content="#7c3aed"/>
+  <link rel="preload" href="assets/css/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/site.css"></noscript>
+  <link rel="canonical" href="https://example.com/blog.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Blog | Ashkan"/>
+  <meta property="og:description" content="Notes, projects and engineering write-ups."/>
+  <meta property="og:url" content="https://example.com/blog.html"/>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header glass neon" id="siteHeader" role="banner">
+  <div class="container row">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img src="favicon.svg" alt="A logo" width="28" height="28"/><span>Ashkan</span>
+    </a>
+    <nav class="menu" id="mainMenu" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+    <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button id="switchFa" class="btn ghost" aria-label="Switch to Persian">FA</button>
+      <button id="switchEn" class="btn ghost" aria-label="Switch to English">EN</button>
+      <button id="themeToggle" class="btn ghost" title="Theme" aria-pressed="false">☼/☾</button>
+      <button class="hamb" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile menu">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="skills.html" data-i18n="nav.skills">Skills</a>
+    <a href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+    <a href="blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="drawer-lang">
+      <button id="drawerFa" class="btn ghost">FA</button>
+      <button id="drawerEn" class="btn ghost">EN</button>
+    </div>
+  </aside>
+</header>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile menu">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="skills.html" data-i18n="nav.skills">Skills</a>
+    <a href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+    <a href="blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="drawer-lang">
+      <button id="drawerFa" class="btn ghost">FA</button>
+      <button id="drawerEn" class="btn ghost">EN</button>
+    </div>
+  </aside>
+
+  <main id="main" class="container" style="padding-top:96px">
+    <h1 data-i18n="blog.h1">وبلاگ</h1>
+    <p class="muted" data-i18n="blog.subtitle">یادداشت‌ها، تجربه‌ها و نوشته‌های فنی.</p>
+
+    <div id="blogList" class="grid" style="margin-top:18px"></div>
+  </main>
+
+  <!-- Chatbot -->
+  <button class="chatbot-fab" id="chatFab" aria-label="Open chat">💬</button>
+  <section class="chatbot-panel" id="chatPanel" aria-label="Chatbot">
+    <div class="chatbot-head">
+      <strong data-i18n="chat.title">چت‌بات</strong>
+      <button class="btn ghost" id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chatbot-messages" id="chatLog"></div>
+    <form class="chatbot-input" id="chatForm">
+      <input id="chatInput" type="text" autocomplete="off" placeholder="پیامت را بنویس..." data-i18n-placeholder="chat.placeholder"/>
+      <button type="submit" data-i18n="chat.send">ارسال</button>
+    </form>
+  </section>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/media"
+public_folder: "/assets/media"
+
+site_url: "/"
+display_url: "/"
+
+local_backend: true
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    files:
+      - file: "assets/data/blog.json"
+        label: "Posts (JSON)"
+        name: "posts"
+        format: "json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.slug}} — {{fields.title.en}}"
+            fields:
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Date (YYYY-MM-DD)", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Persian", name: "fa", widget: "string" }
+              - label: "Excerpt"
+                name: "excerpt"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Persian", name: "fa", widget: "text" }
+              - label: "Content (HTML)"
+                name: "content"
+                widget: "object"
+                fields:
+                  - { label: "English (HTML)", name: "en", widget: "text" }
+                  - { label: "Persian (HTML)", name: "fa", widget: "text" }
+
+  - name: "certificates"
+    label: "Certificates"
+    files:
+      - file: "assets/data/certificates.json"
+        label: "Certificates (JSON)"
+        name: "certificates"
+        format: "json"
+        fields:
+          - label: "Certificates"
+            name: "certificates"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Persian", name: "fa", widget: "string" }
+              - { label: "Issuer", name: "issuer", widget: "string", required: false }
+              - { label: "Date", name: "date", widget: "string", required: false }
+              - { label: "URL", name: "url", widget: "string", required: false }
+
+  - name: "chatbot"
+    label: "Chatbot Knowledge"
+    files:
+      - file: "assets/data/chatbot_kb.json"
+        label: "Knowledge Base (JSON)"
+        name: "kb"
+        format: "json"
+        fields:
+          - label: "Pairs"
+            name: "pairs"
+            widget: "list"
+            fields:
+              - label: "Question"
+                name: "q"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Persian", name: "fa", widget: "string" }
+              - label: "Answer"
+                name: "a"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Persian", name: "fa", widget: "text" }
